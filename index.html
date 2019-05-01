@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GVI Landing page</title>
+    <!--Normalizer-->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <!--Animaciones-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap (-_-) -->
+    <link rel="stylesheet" href="Bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <!--Estilos personalizados-->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/nosotros.css">
+    <!--Fuentes-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Prata" rel="stylesheet"> 
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--Otros-->
+    <script src="https://npmcdn.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/prettyphoto/3.1.6/js/jquery.prettyPhoto.js"></script>
+    <script src="https://cdn.jsdelivr.net/prettyphoto/3.1.6/css/prettyPhoto.css"></script>
+</head>
+<style>
+    /*Estilos generales*/
+    :root {
+        --Morado: #9e16dd;
+        --Negro: #2c2c2c;
+        --Gris: #f3f2f2;
+        --Blanco: #ffffff;
+    /*Estilos extras*/
+        --GrisFuerte:#888888;
+    }
+    
+</style>
+<body>
+<!-- Solo me falto la parte de usuarios-->
+<!--Animación de bienvenida-->
+    <div class="welcome" id="logo_welcome">
+        <div class="animated fadeInDown">
+            <picture>
+                <source media="(min-width: 650px)" srcset="img/2.jpg">
+                <source media="(min-width: 0px)" srcset="img/4.jpg">
+                <img src="img/2.jpg" alt="GVI Logo" style="width:auto;">
+            </picture>
+        </div>
+        <p class="animated fadeIn">Medio siglo transformando sueños en realidades que trascienden</p>
+    </div>
+
+<!--Landing, slider, menú-->
+    <section id="inicio">
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><img src="img/3.png" width="50px" alt="Gomez Vazquez International"></li>
+                    <li><a href="#inicio">INICIO</a></li>
+                    <li><a href="#portafolio">PORTAFOLIO</a></li>
+                    <li><a href="#proyectos">PROYECTOS</a></li>
+                    <li><a href="#nosotros">NOSOTROS</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container-slide">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="descripcion">
+                            <h2>Restaurant</h2>
+                            <p>Descripción del proyecto. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem quas expedita nostrum, quasi ratione cupiditate error nulla recusandae quis ut doloremque amet iure ipsum necessitatibus quo, odio unde impedit. Quibusdam?</p></div>
+                        <img class="d-block w-100" src="/img/landing1.jpg" alt="Restaurant nice">
+                    </div>
+                    <div class="carousel-item">
+                        <div class="descripcion">
+                            <h2>Hacienda</h2>
+                            <p>Descripción del proyecto. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem quas expedita nostrum, quasi ratione cupiditate error nulla recusandae quis ut doloremque amet iure ipsum necessitatibus quo, odio unde impedit. Quibusdam?</p>
+                        </div>
+                        <img class="d-block w-100" src="/img/landing2.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <div class="descripcion">
+                            <h2>Residencia</h2>
+                            <p>Descripción del proyecto. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem quas expedita nostrum, quasi ratione cupiditate error nulla recusandae quis ut doloremque amet iure ipsum necessitatibus quo, odio unde impedit. Quibusdam?</p>
+                        </div>
+                        <img class="d-block w-100" src="/img/landing3.jpg" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+                    <span>&#8592;</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+                    <span>&#8594;</span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--Portafolio-->
+    <section class="two" id="portafolio">
+        <h2 data-aos="flip-left">Portafolio.</h2>
+        <div class="portafolio-container">                      
+            <div class="button js-filter">
+                <button data-filter="*" class="is-active" data-aos="fade-right" data-aos-anchor-placement="top-bottom">Todos</button>
+                <button data-filter=".filter1" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="100">Hoteles</button>
+                <button data-filter=".filter2" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Playa</button>
+                <button data-filter=".filter3" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="300">Urbano</button>
+            </div>
+            <ul class="list" data-aos="zoom-in">
+                <li class="list__item filter1" data-toggle="modal" data-target="#Modal1">
+                    <img src="img/portafolio1.jpg" alt="Imagen 1"/>
+                </li>
+                <li class="list__item filter3" data-toggle="modal" data-target="#Modal2">
+                    <img src="img/portafolio2.jpg" alt="Imagen 2"/>
+                </li>
+                <li class="list__item filter1" data-toggle="modal" data-target="#Modal3">
+                    <img src="img/portafolio3.jpg" alt="Imagen 3"/>
+                </li>
+                <li class="list__item filter3" data-toggle="modal" data-target="#Modal4">
+                    <img src="img/portafolio4.jpg"  alt="Imagen 4"/>
+                </li>
+                <li class="list__item filter1" data-toggle="modal" data-target="#Modal5">
+                    <img src="img/portafolio5.jpg" alt="Imagen 5"/>
+                </li>
+                <li class="list__item filter2" data-toggle="modal" data-target="#Modal6">
+                    <img src="img/portafolio6.jpg" alt="Imagen 6"/>
+                </li>
+                <li class="list__item filter3" data-toggle="modal" data-target="#Modal7">
+                    <img src="img/portafolio7.jpg" alt="Imagen 7"/>
+                </li>
+                <li class="list__item filter1" data-toggle="modal" data-target="#Modal8">
+                    <img src="img/portafolio8.jpg" alt="Imagen 8"/>
+                </li>
+                <li class="list__item filter2" data-toggle="modal" data-target="#Modal9">
+                    <img src="img/portafolio9.jpg" alt="Imagen 9"/>
+                </li>
+                <li class="list__item filter2" data-toggle="modal" data-target="#Modal10">
+                    <img src="img/portafolio10.jpg" alt="Imagen 10"/>
+                </li>          
+            </ul>     
+        </div>
+
+<!--Modal-->
+        <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <img src="img/portafolio1.jpg" alt="Imagen 1">
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <img src="img/portafolio2.jpg" alt="Imagen 2">
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <img src="img/portafolio3.jpg" alt="Imagen 3">
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="Modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <img src="img/portafolio4.jpg" alt="Imagen 4">
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="Modal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <img src="img/portafolio5.jpg" alt="Imagen 5">
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="Modal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <img src="img/portafolio6.jpg" alt="Imagen 6">
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="Modal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <img src="img/portafolio7.jpg" alt="Imagen 7">
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="Modal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <img src="img/portafolio8.jpg" alt="Imagen 8">
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="Modal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <img src="img/portafolio9.jpg" alt="Imagen 9">
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="Modal10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <img src="img/portafolio10.jpg" alt="Imagen 10">
+                </div>
+            </div>
+        </div>
+    </section>
+<!--Cards-->
+<section class="three" id="proyectos">
+        <h2 data-aos="fade-out">Proyectos.</h2>
+        <div class="cards-container">
+            <div data-aos="fade-out">
+                <div class="card card-one">
+                    <img class="card-img-top" src="img/proyecto1.jpg" alt="Card image cap" data-toggle="modal" data-target="#proyecto1">
+                    <div class="card-body">
+                    <p class="card-text">Ubicado a dos horas de Santo Domingo, República Dominicana este plan maestro de 10 hectáreas esta pensado en tres etapas, donde se contemplan 20 villas, 114 condos y 20 loft; para el entretenimiento de los visitantes y residentes se contara con club de playa, área infantil, zona de prácticas para golf y centro ecuestre, entre otras amenidades.</p>
+                    <!-- I got these buttons from simplesharebuttons.com -->
+                        <div id="share-buttons">                              
+                            <!-- Facebook -->
+                            <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+                                <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+                            </a>
+                            
+                            <!-- LinkedIn -->
+                            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
+                                <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+                            </a>
+                            
+                            <!-- Pinterest -->
+                            <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+                                <img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" />
+                            </a>
+                            
+                            <!-- Tumblr-->
+                            <a href="http://www.tumblr.com/share/link?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank">
+                                <img src="https://simplesharebuttons.com/images/somacro/tumblr.png" alt="Tumblr" />
+                            </a>
+                            
+                            <!-- Twitter -->
+                            <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+                                <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+                            </a>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="proyecto1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <img src="img/proyecto1.jpg" alt="Proyecto1">
+                        </div>
+                    </div>
+                </div>
+            <div class="card card-two" data-aos="fade-out">
+                <img class="card-img-top" src="img/proyecto2.jpg" alt="Card image cap" data-toggle="modal" data-target="#proyecto2">
+                <div class="card-body">
+                <p class="card-text">Este Proyecto será un gran parque metropolitano que dotará de espacios recreativos y de convivencia a la zona, el master plan se realiza como parte integral de esta propuesta, mediante la extensión de nuevas áreas residenciales, comerciales y de usos mixtos.</p>
+                <div id="share-buttons">                              
+                        <!-- Facebook -->
+                        <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+                            <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+                        </a>
+                        
+                        <!-- LinkedIn -->
+                        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
+                            <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+                        </a>
+                        
+                        <!-- Pinterest -->
+                        <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+                            <img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" />
+                        </a>
+                        
+                        <!-- Tumblr-->
+                        <a href="http://www.tumblr.com/share/link?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank">
+                            <img src="https://simplesharebuttons.com/images/somacro/tumblr.png" alt="Tumblr" />
+                        </a>
+                        
+                        <!-- Twitter -->
+                        <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+                            <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+                        </a>    
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="proyecto2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <img src="img/proyecto2.jpg" alt="Proyecto2">
+                        </div>
+                    </div>
+                </div>
+            <div class="card card-three" data-aos="fade-out">
+                <img class="card-img-top" src="img/proyecto3.jpg" alt="Card image cap" data-toggle="modal" data-target="#proyecto3">
+                <div class="card-body">
+                <p class="card-text">Situada en una ubicación ideal frente al mar, Marina Veracruz tiene la capacidad para dar cabida a alrededor de 260 barcos. Con una superficie de 523,190 m2, este desarrollo náutico se complementa con áreas comerciales, una parcela designada para un hotel, apartamentos, club de playa, así mismo, edificios de uso mixto que proporcionan una gran variedad de comida, entretenimiento y opciones recreativas, así como Club de Yates.</p>
+                <div id="share-buttons">                              
+                        <!-- Facebook -->
+                        <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+                            <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+                        </a>
+                        
+                        <!-- LinkedIn -->
+                        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
+                            <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+                        </a>
+                        
+                        <!-- Pinterest -->
+                        <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+                            <img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" />
+                        </a>
+                        
+                        <!-- Tumblr-->
+                        <a href="http://www.tumblr.com/share/link?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank">
+                            <img src="https://simplesharebuttons.com/images/somacro/tumblr.png" alt="Tumblr" />
+                        </a>
+                        
+                        <!-- Twitter -->
+                        <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+                            <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+                        </a>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="proyecto3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <img src="img/proyecto3.jpg" alt="Proyecto3">
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="four" id="nosotros">
+        <h2>Nosotros</h2>
+        <div id="info-container">
+        </div>
+    </section>
+    </body>
+<script src="js/index.js"></script>
+<script src="Bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+<script>
+//Carousel
+$('.carousel').carousel({
+    interval: 5000
+  })
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</html>
