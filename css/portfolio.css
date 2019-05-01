@@ -12,7 +12,7 @@
     padding: 100px;
     font-size: calc(20px + 5vw);
     color: #f35626;
-    background-image: url('img/landing2.jpg');
+    background-image: url('../img/landing2.jpg');
     background-position: center center;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
