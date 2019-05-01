@@ -1,0 +1,145 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.welcome {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: var(--Blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+    z-index: 3; /*arrgh buttsrap*/
+}
+
+.welcome p {
+    color: var(--GrisFuerte);
+    margin: 20px;
+    text-align: center;
+}
+
+.hide{
+    display: none;
+}
+
+.fadeInDown {
+    animation-delay: 0.3s;
+}
+
+.fadeIn {
+    animation-delay: 0.9s;
+}
+
+nav {
+    background: none;
+    border-bottom: 1px solid var(--Blanco);
+    width: 80%;
+    margin: 0 auto;
+    height: 80px;
+    color: var(--Blanco);
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    height: inherit;
+    align-items: center;
+    color: inherit;
+}
+
+nav ul a {
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    color: inherit;
+    font-size: 0.8rem;
+    transition: 0.5s;
+}
+
+nav ul a:hover {
+    color: #cfcfcf;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.nav-container {
+    height: 80px;
+    background: none;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+
+.sticky {
+    position: fixed;
+    height: 50px;
+    width: 100vw;
+    padding-left: 0;
+    color: var(--Blanco);
+    border-bottom: 1px solid var(--Negro);
+    background-image: linear-gradient(rgba(37, 37, 37, 0.822), rgba(0, 0, 0, 0.74)),url("../img/navbar.png");
+}
+
+
+/*Slider*/
+.carousel-item {
+    opacity: 0.9; 
+    position: relative;
+}
+
+.descripcion {
+    position: absolute;
+    color:var(--Blanco);
+    left : 50%;
+    transform: translate(-50%,50%);
+    bottom: 50%;
+    font-family: 'Prata', serif; 
+    padding: 20px 60px;
+    width: 70%;
+    background: #00000079;
+    padding: 10px 30px;
+    font-size: calc(8px + 0.7vw);
+}
+
+.descripcion h2 {
+    font-size: calc(10px + 1vw);
+    text-align: center;
+}
+
+.carousel-control-prev span,
+.carousel-control-next span {
+    font-family: 'Prata', serif;
+    font-size: calc(10px + 1.5vw);
+}
+
+@media (max-width: 576px) {
+    .descripcion p {
+        display: none;
+    }
+
+    .descripcion {
+        width: 50%;
+        bottom: 35px;
+        padding: 0;
+    }
+    
+    li a {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        height: 40px;
+    }
+    
+    nav ul {
+        padding-left: 0;
+    }
+}
+

@@ -1,0 +1,49 @@
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.cards-container .card {
+    margin: 10px;
+    font-family: 'Prata', serif; 
+    color: var(--Negro);
+    font-size: calc(10px + 0.5rem);
+}
+
+.card {
+    width: 60vw;
+    margin: 0 auto!important;
+    margin-bottom: 200px!important;
+}
+
+.three {
+    background-size: cover;
+    background-image: linear-gradient(#ffffffe5, #ffffffde),url('../img/architectural-design-architecture-building-534247.jpg');
+    background-size: cover;
+}
+
+#share-buttons img {
+    width: 35px;
+    padding: 5px;
+    border: 0;
+    box-shadow: 0;
+    }
+
+#share-buttons {
+    text-align: center;
+}
+
+#share-buttons a:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 576px) {
+    .cards-container .card {
+        font-size: calc(8px + 0.2rem);
+    }
+
+    .card {
+        width: 90%;
+    }
+}
